@@ -1,15 +1,16 @@
-<?php
+<?php 
 
-// Allow the config
-define('__CONFIG__', true);
-// Require the config
-require_once "inc/config.php";
+	// Allow the config
+	define('__CONFIG__', true);
+	// Require the config
+	require_once "inc/config.php"; 
 
+	Page::ForceDashboard();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,45 +20,47 @@ require_once "inc/config.php";
 
     <base href="/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.24/css/uikit.min.css" />
-</head>
+  </head>
 
-<body>
-<ul>
-    <li><a href="login.php">Login</a></li>
-    <li><a href="register.php">Register</a></li>
-</ul>
+  <body>
+  <?php require_once "inc/navbar.php"; ?>
+  	<div class="uk-section uk-container">
+  		<div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1" uk-grid>
+			<form class="uk-form-stacked js-register">
+				
+				<h2>Register</h2>
 
+			    <div class="uk-margin">
+			        <label class="uk-form-label" for="form-stacked-text">Email</label>
+			        <div class="uk-form-controls">
+			            <input class="uk-input" id="form-stacked-text" type="email" required='required' placeholder="email@email.com">
+			        </div>
+			    </div>
 
-<div class="uk-section uk-container">
-    <div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1" uk-grid>
-        <form class="uk-form-stacked js-register">
-
-            <h2>Register</h2>
-
-            <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">Email</label>
-                <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" type="email" required='required' placeholder="email@email.com">
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Password</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-stacked-text" type="password" required='required' placeholder="Password">
+                    </div>
                 </div>
-            </div>
 
-            <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-text">Passphrase</label>
-                <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" type="password" required='required' placeholder="Your passphrase">
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="comfirm-password">Comfirm password</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="comfirm-password" type="password" required='required' placeholder="Comfirm password">
+                    </div>
                 </div>
-            </div>
 
-            <div class="uk-margin uk-alert uk-alert-danger js-error" style='display: none;'></div>
+			    <div class="uk-margin uk-alert uk-alert-danger js-error" style='display: none;'></div>
 
-            <div class="uk-margin">
-                <button class="uk-button uk-button-default" type="submit">Register</button>
-            </div>
+			    <div class="uk-margin">
+			        <button class="uk-button uk-button-default" type="submit">Register</button>
+			    </div>
 
-        </form>
-    </div>
-</div>
+			</form>
+  		</div>
+  	</div>
 
-<?php require_once "inc/footer.php"; ?>
-</body>
+  	<?php require_once "inc/footer.php"; ?> 
+  </body>
 </html>

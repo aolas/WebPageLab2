@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -10,13 +13,49 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="Aded login and registration Page">
-      <change afterPath="$PROJECT_DIR$/inc/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="Added registration and login forms">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/classes/DB.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-utilities.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-utilities.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-utilities.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-utilities.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-utilities.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,25 +83,39 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2\assets" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2" />
       <recent name="C:\Users\ramun\PhpstormProjects\untitled1" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.php">
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/index.php/index.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="PHP Script.index.php" />
       </list>
     </recent_temporary>
@@ -78,8 +131,27 @@
       <workItem from="1603964507422" duration="513000" />
       <workItem from="1603965106357" duration="5418000" />
       <workItem from="1603998646557" duration="2174000" />
-      <workItem from="1604079598920" duration="6822000" />
+      <workItem from="1604079598920" duration="6867000" />
+      <workItem from="1604121069373" duration="3695000" />
+      <workItem from="1604315329605" duration="1977000" />
+      <workItem from="1604329888288" duration="8612000" />
+      <workItem from="1604393277919" duration="5497000" />
+      <workItem from="1604419466437" duration="61000" />
+      <workItem from="1604419541508" duration="296000" />
+      <workItem from="1604419926771" duration="1259000" />
+      <workItem from="1604903969222" duration="5536000" />
+      <workItem from="1604932829723" duration="2110000" />
+      <workItem from="1604995215542" duration="4935000" />
+      <workItem from="1605101137630" duration="7370000" />
     </task>
+    <task id="LOCAL-00001" summary="Added registration and login forms">
+      <created>1604089213000</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604089213000</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,21 +171,47 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Aded login and registration Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aded login and registration Page" />
+    <MESSAGE value="Added registration and login forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added registration and login forms" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="194" key="#CLI_Interpreters" timestamp="1603999827544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="194" key="#CLI_Interpreters/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1603999827544" />
+    <state x="552" y="178" key="#Deployment" timestamp="1604911471359">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604911471359" />
+    <state x="637" y="201" key="#Options" timestamp="1604910562322">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="637" y="201" key="#Options/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604910562322" />
     <state x="667" y="162" key="#PHP" timestamp="1603997767661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="162" key="#PHP/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1603997767661" />
-    <state x="1157" y="259" key="FileChooserDialogImpl" timestamp="1603999611057">
+    <state x="336" y="361" key="#SQL_Dialects" timestamp="1604398490366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1157" y="259" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1603999611057" />
+    <state x="336" y="361" key="#SQL_Dialects/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604398490366" />
+    <state x="752" y="378" key="#Scopes" timestamp="1604905550014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="378" key="#Scopes/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604905550014" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604398531171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604398531171" />
+    <state x="727" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605116888412">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="727" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605116888412" />
+    <state x="1157" y="259" key="FileChooserDialogImpl" timestamp="1604910670464">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1157" y="259" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604910670464" />
+    <state x="2504" y="309" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1604908787325" />
     <state x="838" y="417" width="558" height="205" key="Github.ShareDialog" timestamp="1603965144912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -122,33 +220,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="747" y="224" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1603965152544" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1604086431919">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1604348146556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604086431919" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1604086431919">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604348146556" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1604348146556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604086431919" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1604086431918">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604348146556" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1604348146556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604086431918" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1604086431919">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604348146556" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1604348146556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604086431919" />
-    <state x="730" y="242" key="NewPhpClassDialog" timestamp="1604085352312">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604348146556" />
+    <state x="730" y="242" key="NewPhpClassDialog" timestamp="1604122814466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="730" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604085352312" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604086968998">
+    <state x="730" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604122814466" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1605116898245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604086968998" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1603999828432">
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605116898245" />
+    <state x="1946" y="196" key="SettingsEditor" timestamp="1604908797697">
+      <screen x="1920" y="0" width="1024" height="1240" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604906060662" />
+    <state x="1946" y="196" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1604908797697" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1604089219247">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1603999828432" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604089219247" />
   </component>
 </project>
