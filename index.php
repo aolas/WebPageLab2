@@ -23,17 +23,20 @@
 
   <body>
   <?php require_once "inc/navbar.php"; ?>
-  <div class="uk-section uk-container">
-  		<?php 
-  			echo "Hello world. Today is: ";
-  			echo date("Y m d");
-  		?> 
-  		<p>
-  			<a href="/login.php">Login</a>
-  			<a href="/register.php">Register</a>
-  		</p>
-  	</div>
 
+  <div class="uk-section uk-container">
+      <div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1" uk-grid>
+        <?php
+
+        $arrValues = Article::getArticles();
+        foreach ($arrValues as $row){
+            echo  '<div class="uk-container"> <h2>' ,  $row[1] , "</h2>";
+            echo "<p> Posted " , $row[2] , "</p></div>";
+        }
+
+        ?>
+      </div>
+  </div>
   	<?php require_once "inc/footer.php"; ?> 
   </body>
 </html>
