@@ -36,15 +36,22 @@ class User {
 		}
 	}
 
-	public function setEmail($new_email) {
+	public static function changeEmail($new_email) {
+		$con = DB::getConnection();
+		$email = (string) Filter::String( $new_email );
+		$user_id = Filter::Int( $_SESSION['user_id']);
+		//UPDATE users SET email = 'ramunas@tomas.eu' WHERE user_id=1
+		try {
+			$updateUser = $con->prepare("UPDATE users SET email=:email WHERE user_id=:user_id");
+			$updateUser->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+			$updateUser->bindParam(':email', $email, PDO::PARAM_STR);
+			$updateUser->execute();
+		} catch (PDOException $e){
+			return "failed";
+		}
 
-		// $User = new User(1);
-		// $User->setEmail("new@email.com");
+		return "success";
 
-		// echo $this->email; // The current email address
-		// echo $this->user_id; // The existing user id
-		
-		// $this->con->prepare("...")		
 	}
 
 

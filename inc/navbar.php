@@ -10,7 +10,7 @@ if(!defined('__CONFIG__')) {
         <div class="uk-navbar-center-left"><div>
                 <ul class="uk-navbar-nav">
                     <li><a href="/index.php">Home</a></li>
-                    <li><a href="#">Item</a></li>
+                    <li><a href="/requirements.php">Requirements</a></li>
 
                 </ul>
             </div>
@@ -23,11 +23,13 @@ if(!defined('__CONFIG__')) {
                     if(Page::IsLogedIn()) {
                         // The user is allowed here
                         echo '<li> <a href="/managearticle.php">Articles</a> </li>';
+                        echo '<li> <a href="/dashboard.php">Dashboard</a> </li>';
                         echo '<li> <a href="/logout.php">Log out</a> </li>';
 
                     } else {
                         // The user is not allowed here.
                         echo '<li> <a href="/login.php">Log in</a> </li>';
+                        echo '<li> <a href="/register.php">Register</a> </li>';
                     }
                     ?>
                 </ul>

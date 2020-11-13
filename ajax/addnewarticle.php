@@ -11,9 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // header('Content-Type: application/json');
 
     $return = [];
-
     $title = Filter::String( $_POST['title'] );
-
     $articleText = Filter::String($_POST['articleText']);
 
     if(strlen ($articleText) > 0 && strlen ($title)> 0 ) {
@@ -26,11 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $addArticle->execute();
 
         $articleId = $con->lastInsertId();
-//
-//        $_SESSION['user_id'] = (int) $user_id;
 
-        //$return['redirect'] = '/dashboard.php?message=welcome';
-        //$return['is_logged_in'] = true;
         $return['article_id'] = $addArticle;
         $return['done']= "Article added";
     } else{

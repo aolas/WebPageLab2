@@ -14,39 +14,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="follow">
+      <?php
+      require_once "inc/head.php";
+      ?>
 
-    <title>Page Title</title>
+    <title>Dashboard</title>
 
-    <base href="/" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.24/css/uikit.min.css" />
   </head>
 
   <body>
   <?php require_once "inc/navbar.php"; ?>
   	<div class="uk-section uk-container">
-  		<h2>Dashboard</h2>
-      <p>Hello <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?></p>
-      <p><a href="/logout.php">Logout</a></p>
-      <p>Ideas for extending this system:</p>
-      <ul>
-        <li>NEW FEEDS</li>
-        <li>FRIEND FEED</li>
-        <li>CHANGE EMAIL</li>
-<!--        <li>CHANGE PASSWORD</li>-->
-<!--        <li>RESET PASSWORD</li>-->
-<!--        <li>INVITE MODULE </li>-->
-<!--        <li>ADD FIRST NAME</li>-->
-<!--        <li>ADD LASTNAME</li>-->
-<!--        <li>ADD EMAIL CONFIRMATION</li>-->
-<!--        <li>ADD SMS CONFIRMATION (VIA TWILIO)</li>-->
-      </ul>
-
+        <h2>Dashboard</h2>
+        <p>Hello <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?></p>
+        <p><a href="/logout.php">Logout</a></p>
+        <p>Plans for aditional support:</p>
+        <ul>
+            <li class="password"></li>
+            <li>CHANGE PASSWORD</li>
+        </ul>
+        <form class="uk-form-stacked js-user-update">
+            <h2>User data</h2>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Email</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input email" id="form-stacked-text" type="email" required='required' value="<?php echo $User->email;  ?>" placeholder="email@email.com">
+                </div>
+            </div>
+            <div class="uk-margin uk-alert uk-alert-danger js-error" style='display: none;'></div>
+            <div class="uk-margin">
+                <button class="uk-button uk-button-default" type="submit">Change</button>
+            </div>
+        </form>
   	</div>
-
   	<?php require_once "inc/footer.php"; ?> 
   </body>
 </html>
