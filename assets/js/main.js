@@ -20,7 +20,7 @@ $(document)
 
 	var dataObj = {
 		email: $("input[type='email']", $form).val(),
-		password: $("input[type='password']", $form).val()
+		password: $(".password", $form).val()
 	};
 
 	if(!ValidateEmail(dataObj.email)) {
@@ -28,9 +28,9 @@ $(document)
 			.text("Please enter a valid email address")
 			.show();
 		return false;
-	} else if (dataObj.password.length < 11) {
+	} else if (dataObj.password.length < 8) {
 		$error
-			.text("Please enter a passphrase that is at least 11 characters long.")
+			.text("Please enter a passphrase that is at least 8 characters long.")
 			.show();
 		return false;
 	}
@@ -164,14 +164,17 @@ $(document)
 
 		var $form = $(this);
 		var $error = $(".js-error", $form);
+		var $message = $(".js-message", $form);
 
 		var dataObj = {
-			email: $(".email", $form).val()
+			email: $(".email", $form).val(),
+			name: $(".name",$form).val()
 		};
 
 
 		// Assuming the code gets this far, we can start the ajax process
 		$error.hide();
+		$message.hide();
 
 		$.ajax({
 			type: 'POST',
@@ -188,6 +191,10 @@ $(document)
 					$error
 						.html(data.error)
 						.show();
+				}else if (data.status !== undefined){
+					$message
+						.text(data.status)
+						.show();
 				}
 			})
 			.fail(function ajaxFailed(e) {
@@ -199,4 +206,60 @@ $(document)
 			})
 
 		return false;
+	})
+	.on("submit", "form.js-change-password", function(event) {
+		event.preventDefault();
+
+		var $form = $(this);
+		var $error = $(".js-error", $form);
+		var $message = $(".js-message", $form);
+
+		var dataObj = {
+			currentPassword: $(".current-password", $form).val(),
+			password: $(".password", $form).val()
+		};
+
+		if (dataObj.currentPassword.length < 8) {
+			$error
+				.text("Please enter a current passphrase that is at least 8 characters long.")
+				.show();
+			return false;
+		} else if (dataObj.password.length < 8) {
+			$error
+				.text("Please enter a new passphrase that is at least 8 characters long.")
+				.show();
+			return false;
+		}
+		$error.hide();
+		$message.hide();
+
+		$.ajax({
+			type: 'POST',
+			url: '/ajax/changepassword.php',
+			data: dataObj,
+			dataType: 'json',
+			async: true,
+		})
+			.done(function ajaxDone(data) {
+				// Whatever data is
+				if (data.redirect !== undefined) {
+					window.location = data.redirect;
+				} else if (data.error !== undefined) {
+					$error
+						.text(data.error)
+						.show();
+				} else if (data.status !== undefined){
+					$message
+						.text(data.status)
+						.show();
+
+				}
+			})
+			.fail(function ajaxFailed(e) {
+				// This failed
+			})
+			.always(function ajaxAlwaysDoThis(data) {
+				// Always do
+				//console.log('Always');
+			})
 	})

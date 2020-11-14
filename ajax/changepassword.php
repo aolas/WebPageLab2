@@ -11,9 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // header('Content-Type: application/json');
 
     $return = [];
-
-    $return['status'] =  User::changeNameEmail($_POST['email'] ,$_POST['name'] );
-
+    $return[ "status"] = User::changePassword($_POST['currentPassword'] ,$_POST['password'] );
 
     echo json_encode($return, JSON_PRETTY_PRINT); exit;
 } else {
