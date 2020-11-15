@@ -80,9 +80,9 @@ $(document)
 				.text("Please enter a valid email address")
 				.show();
 			return false;
-		} else if (dataObj.password.length < 11) {
+		} else if (dataObj.password.length < 8) {
 			$error
-				.text("Please enter a passphrase that is at least 11 characters long.")
+				.text("Please enter a passphrase that is at least 8 characters long.")
 				.show();
 			return false;
 		}
@@ -253,6 +253,46 @@ $(document)
 						.text(data.status)
 						.show();
 
+				}
+			})
+			.fail(function ajaxFailed(e) {
+				// This failed
+			})
+			.always(function ajaxAlwaysDoThis(data) {
+				// Always do
+				//console.log('Always');
+			})
+	})
+	.on("click", "p button.delete", function(event) {
+		event.preventDefault();
+
+		var $button = $(this);
+		var $error = $("p.js-error");
+
+
+		var dataObj = {
+			article_id: $button.attr('article')
+
+		};
+
+		$error.hide();
+
+
+		$.ajax({
+			type: 'POST',
+			url: '/ajax/removearticle.php',
+			data: dataObj,
+			dataType: 'json',
+			async: true,
+		})
+			.done(function ajaxDone(data) {
+				// Whatever data is
+				if (data.redirect !== undefined) {
+					window.location = data.redirect;
+				} else if (data.error !== undefined) {
+					$error
+						.text(data.error)
+						.show();
 				}
 			})
 			.fail(function ajaxFailed(e) {

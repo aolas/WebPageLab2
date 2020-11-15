@@ -26,6 +26,14 @@ require_once "inc/config.php";
     if( $_GET["article"] ){
 
         $article = new Article($_GET["article"]);
+
+        if(Page::IsLogedIn()){
+            echo'
+                <p uk-margin>
+                <button class="uk-button uk-button-default delete" article=',$article->article_id,'>Delete</button>
+                <div class="uk-margin uk-alert uk-alert-danger js-error" style="display: none;"></div>
+                </p>';
+        }
         echo '
             <article class="uk-article">
                   <h1 class="uk-article-title"><a class="uk-link-reset" href="">', $article->title,'</a></h1>

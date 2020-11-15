@@ -46,6 +46,22 @@ class Article {
         $articles->execute();
         return $articles->fetchAll();
     }
+    public static function removeArticle(int $article_id ) {
+
+//        DELETE FROM books WHERE author_id = '2034';
+        $connectin = DB::getConnection();
+        $article_id = Filter::Int( $article_id );
+        $return = [];
+        try {
+            $deleteArticle = $connectin->prepare("DELETE FROM articles WHERE article_id=:article_id");
+            $deleteArticle->bindParam(':article_id', $article_id, PDO::PARAM_INT);
+            $deleteArticle->execute();
+            $return['status'] = 'Request compleated';
+        } catch (PDOException $e){
+            $return['error']="Request error";
+        }
+        return $return;
+    }
 
 
 //    public static function Find($email, $return_assoc = false) {

@@ -13,14 +13,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/readarticle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="Added added read article function">
+      <change afterPath="$PROJECT_DIR$/ajax/removearticle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/addnewarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/addnewarticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/classes/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managearticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/managearticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/readarticle.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,7 @@
       <workItem from="1605249007720" duration="25812000" />
       <workItem from="1605332552134" duration="10668000" />
       <workItem from="1605382585012" duration="2886000" />
-      <workItem from="1605419654208" duration="7205000" />
+      <workItem from="1605419654208" duration="16687000" />
     </task>
     <task id="LOCAL-00001" summary="Added registration and login forms">
       <created>1604089213000</created>
@@ -159,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605386607666</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added added read article function">
+      <created>1605427651750</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605427651750</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +191,8 @@
     <MESSAGE value="email change" />
     <MESSAGE value="Added password &#10;Fixed frontend messages after password and email change" />
     <MESSAGE value="Added artuiicle ist to article managmen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added artuiicle ist to article managmen" />
+    <MESSAGE value="Added added read article function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added added read article function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="194" key="#CLI_Interpreters" timestamp="1603999827544">
@@ -253,10 +260,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="730" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604122814466" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1605425289174">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1605431745607">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605425289174" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605431745607" />
     <state x="2460" y="389" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1605160181178" />
     <state x="1946" y="196" key="SettingsEditor" timestamp="1604908797697">
       <screen x="1920" y="0" width="1024" height="1240" />

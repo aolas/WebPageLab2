@@ -14,6 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = Filter::String( $_POST['title'] );
     $articleText = Filter::String($_POST['articleText']);
 
+
     if(strlen ($articleText) > 0 && strlen ($title)> 0 ) {
         // Not empty strings
 
