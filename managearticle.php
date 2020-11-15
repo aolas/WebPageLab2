@@ -30,8 +30,8 @@ $User = new User($_SESSION['user_id']);
     <p>Hello <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?></p>
     <ul class="uk-subnav uk-subnav-pill" uk-switcher>
         <li><a href="#">New article</a></li>
-        <li><a href="#">Edit article</a></li>
-        <li><a href="#">Delete article</a></li>
+<!--        <li><a href="#">Edit article</a></li>-->
+<!--        <li><a href="#">Delete article</a></li>-->
     </ul>
 
     <ul class="uk-switcher uk-margin">
@@ -39,7 +39,7 @@ $User = new User($_SESSION['user_id']);
             <form class="article">
                 <fieldset class="uk-fieldset">
 
-                    <legend class="uk-legend">Legend</legend>
+                    <legend class="uk-legend">New article</legend>
 
                     <div class="uk-margin">
                         <input class="uk-input title" required='required' type="text" placeholder="Input">

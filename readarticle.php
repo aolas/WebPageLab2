@@ -31,6 +31,7 @@ require_once "inc/config.php";
             echo'
                 <p uk-margin>
                 <button class="uk-button uk-button-default delete" article=',$article->article_id,'>Delete</button>
+                <a class="uk-button uk-button-default" href="/editarticle.php?article=',$article->article_id,'">Edit</a>
                 <div class="uk-margin uk-alert uk-alert-danger js-error" style="display: none;"></div>
                 </p>';
         }

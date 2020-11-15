@@ -13,15 +13,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $return = [];
     $title = Filter::String( $_POST['title'] );
     $articleText = Filter::String($_POST['articleText']);
-
+    $userId = Page::currentUser();
 
     if(strlen ($articleText) > 0 && strlen ($title)> 0 ) {
         // Not empty strings
 
 
-        $addArticle = $con->prepare("INSERT INTO articles(title, article_text) VALUES(:title, :article_text)");
+        $addArticle = $con->prepare("INSERT INTO articles(title, article_text, user_id) VALUES(:title, :article_text, :user_id)");
         $addArticle->bindParam(':title', $title, PDO::PARAM_STR);
         $addArticle->bindParam(':article_text', $articleText, PDO::PARAM_STR);
+        $addArticle->bindParam(':user_id', $userId, PDO::PARAM_INT);
         $addArticle->execute();
 
         $articleId = $con->lastInsertId();

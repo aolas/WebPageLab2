@@ -32,6 +32,11 @@ class Page {
 			return false;
 		}
 	}
+	static function currentUser(){
+		if (isset($_SESSION['user_id'])){
+			return Filter::Int($_SESSION['user_id']);
+		}
+	}
 }
 
 
