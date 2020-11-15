@@ -32,17 +32,17 @@ class Article {
             $this->user_id 		= (int) $article->user_id;
             $this->title        = (string)$article->title;
             $this->article_text        = (string)$article->article_text;
-            $this->reg_time 	= (string) $article->reg_time;
+            $this->publication_time 	= (string) $article->publication_time;
         } else {
-            // No user.
-            // Redirect to to logout.
-            header("Location: /logout.php"); exit;
+            // No article.
+            // Redirect to to gome.
+            header("Location: /index.php"); exit;
         }
     }
 
     public static function getArticles() {
         $connectin = DB::getConnection();
-        $articles = $connectin->prepare("SELECT article_id, title, publication_time FROM articles");
+        $articles = $connectin->prepare("SELECT article_id, user_id, title, SUBSTRING(article_text,1,200) as article_text , publication_time FROM articles");
         $articles->execute();
         return $articles->fetchAll();
     }

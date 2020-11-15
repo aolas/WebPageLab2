@@ -69,7 +69,6 @@ class User {
 
 
 		$user_found = User::FindById($_SESSION['user_id'],true);
-		//UPDATE users SET email = 'ramunas@tomas.eu' WHERE user_id=1
 		$hash = (string) $user_found['password'];
 		$uid = (int) $user_found['user_id'];
 
@@ -87,6 +86,20 @@ class User {
 			return "Provided data is invalid";
 		}
 		return "success";
+
+	}
+	public static function FindName($user_id) {
+
+		$con = DB::getConnection();
+
+		$user_id = (string) Filter::Int( $user_id );
+
+		$findUser = $con->prepare("SELECT name FROM users WHERE user_id=:user_id LIMIT 1");
+		$findUser->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+		$findUser->execute();
+
+		return $findUser->fetch()['name'];
+
 
 	}
 

@@ -88,7 +88,7 @@ $User = new User($_SESSION['user_id']);
             <?php
             $arrValues = Article::getArticles();
             foreach ($arrValues as $row){
-                echo  '<li>' ,  $row[1] , "</li>";
+                echo  '<li>' ,  $row['title'] , "</li> <br>" ;
 
             }
             ?>
