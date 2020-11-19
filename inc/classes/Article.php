@@ -46,7 +46,7 @@ class Article {
         $articles->execute();
         return $articles->fetchAll();
     }
-    public static function removeArticle(int $article_id ) {
+    public static function removeArticle($article_id ) {
 
 //        DELETE FROM books WHERE author_id = '2034';
         $connectin = DB::getConnection();
@@ -61,6 +61,48 @@ class Article {
             $return['error']="Request error";
         }
         return $return;
+    }
+    public static function changeArticle($article_id,$title,$article_text) {
+
+//        DELETE FROM books WHERE author_id = '2034';
+        $connectin = DB::getConnection();
+        $article_id = Filter::Int( $article_id );
+        $title = Filter::String($title);
+        $article_text = Filter::String($article_text);
+        $wordcount = count(preg_split('~[^\p{L}\p{N}\']+~u',$article_text));
+        $return = [];
+
+        try {
+            $updateArticle = $connectin->prepare("UPDATE articles SET title=:title,article_text=:article_text,wordcount=:wordcount  WHERE article_id=:article_id");
+            $updateArticle->bindParam(':article_text', $article_text, PDO::PARAM_STR);
+            $updateArticle->bindParam(':title', $title, PDO::PARAM_STR);
+            $updateArticle->bindParam(':article_id', $article_id, PDO::PARAM_INT);
+            $updateArticle->bindParam(':wordcount', $wordcount, PDO::PARAM_INT);
+            $updateArticle->execute();
+            $return['status'] = 'Request compleated';
+        } catch (PDOException $e){
+            $return['error']="Request error";
+        }
+        return $return;
+    }
+    public static function articleStats() {
+        $connectin = DB::getConnection();
+        $return = [];
+        try{
+            $getCount = $connectin->prepare("SELECT article_id FROM articles");
+            $getCount->execute();
+            //SELECT SUM(column_name) FROM table_name WHERE condition;
+            $return['rowCount']= $getCount->rowCount();
+            $getCount = $connectin->prepare("SELECT SUM(wordcount) AS wordcount_sum FROM articles");
+            $getCount->execute();
+            $row = $getCount->fetch(PDO::FETCH_ASSOC);
+            $return['wordcount_sum']= $row['wordcount_sum'];
+            $return['status'] = 'Request compleated';
+        } catch (PDOException $e){
+            $return['error']="Request error";
+        }
+        return $return;
+        //SELECT COUNT(*) FROM articles;
     }
 
 

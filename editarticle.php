@@ -29,7 +29,7 @@ Page::ForceLogin();
         $article = new Article($_GET["article"]);
         if($article){
             echo '
-            <form class="edit-article">
+            <form class="edit-article" article_id="',$article->article_id,'">
                 <fieldset class="uk-fieldset">
 
                     <legend class="uk-legend">New article</legend>
@@ -43,9 +43,10 @@ Page::ForceLogin();
                         </div>
 
                         <div class="uk-margin uk-alert uk-alert-danger js-error" style="display: none;"></div>
+                        <div class="uk-margin uk-alert uk-alert-success js-message" style="display: none;"></div>
 
                         <div class="uk-margin">
-                            <button class="uk-button uk-button-default" type="submit">Post article</button>
+                            <button class="uk-button uk-button-default" type="submit">Update article</button>
                         </div>
                   </fieldset>
             </form>

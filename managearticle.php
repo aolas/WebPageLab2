@@ -8,7 +8,7 @@ require_once "inc/config.php";
 Page::ForceLogin();
 
 $User = new User($_SESSION['user_id']);
-
+$stats = Article::articleStats();
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,14 @@ $User = new User($_SESSION['user_id']);
 <?php require_once "inc/navbar.php"; ?>
 <div class="uk-section uk-container">
     <h2>Article managment</h2>
-    <p>Hello <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?></p>
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Total number of words in all articles: <?php echo $stats['wordcount_sum'];   ?></div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Total number of articles: <?php echo $stats['rowCount'];   ?> </div>
+        </div>
+    </div>
     <ul class="uk-subnav uk-subnav-pill" uk-switcher>
         <li><a href="#">New article</a></li>
 <!--        <li><a href="#">Edit article</a></li>-->
@@ -50,6 +57,7 @@ $User = new User($_SESSION['user_id']);
                     </div>
 
                     <div class="uk-margin uk-alert uk-alert-danger js-error" style='display: none;'></div>
+                    <div class="uk-margin uk-alert uk-alert-success js-message" style='display: none;'></div>
 
                     <div class="uk-margin">
                         <button class="uk-button uk-button-default" type="submit">Post article</button>

@@ -17,18 +17,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if(strlen ($articleText) > 0 && strlen ($title)> 0 ) {
         // Not empty strings
+        $wordcount = count(preg_split('~[^\p{L}\p{N}\']+~u',$articleText));
 
-
-        $addArticle = $con->prepare("INSERT INTO articles(title, article_text, user_id) VALUES(:title, :article_text, :user_id)");
+        $addArticle = $con->prepare("INSERT INTO articles(title, article_text,wordcount, user_id) VALUES(:title, :article_text,:wordcount, :user_id)");
         $addArticle->bindParam(':title', $title, PDO::PARAM_STR);
         $addArticle->bindParam(':article_text', $articleText, PDO::PARAM_STR);
         $addArticle->bindParam(':user_id', $userId, PDO::PARAM_INT);
+        $addArticle->bindParam(':wordcount', $wordcount, PDO::PARAM_INT);
         $addArticle->execute();
 
         $articleId = $con->lastInsertId();
 
-        $return['article_id'] = $addArticle;
-        $return['done']= "Article added";
+        $return['status']= "Article added";
     } else{
         $return['error']= "Can't be emty title or article field";
     }

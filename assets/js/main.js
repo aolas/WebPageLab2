@@ -54,7 +54,9 @@ $(document)
 		}
 	})
 	.fail(function ajaxFailed(e) {
-		// This failed 
+		$error
+			.html("Connection problems")
+			.show();
 	})
 	.always(function ajaxAlwaysDoThis(data) {
 		// Always do
@@ -108,7 +110,9 @@ $(document)
 				}
 			})
 			.fail(function ajaxFailed(e) {
-				// This failed
+				$error
+					.html("Connection problems")
+					.show();
 			})
 			.always(function ajaxAlwaysDoThis(data) {
 				// Always do
@@ -122,6 +126,7 @@ $(document)
 
 		var $form = $(this);
 		var $error = $(".js-error", $form);
+		var $message = $(".js-message", $form);
 
 		var dataObj = {
 			title: $(".title", $form).val(),
@@ -131,6 +136,7 @@ $(document)
 
 		// Assuming the code gets this far, we can start the ajax process
 		$error.hide();
+		$message.hide();
 
 		$.ajax({
 			type: 'POST',
@@ -143,6 +149,10 @@ $(document)
 				// Whatever data is
 				if(data.redirect !== undefined) {
 					window.location = data.redirect;
+				}else if(data.status !== undefined){
+					$message
+						.text(data.status)
+						.show();
 				} else if(data.error !== undefined) {
 					$error
 						.html(data.error)
@@ -150,7 +160,9 @@ $(document)
 				}
 			})
 			.fail(function ajaxFailed(e) {
-				// This failed
+				$error
+					.html("Connection problems")
+					.show();
 			})
 			.always(function ajaxAlwaysDoThis(data) {
 				// Always do
@@ -198,7 +210,9 @@ $(document)
 				}
 			})
 			.fail(function ajaxFailed(e) {
-				// This failed
+				$error
+					.html("Connection problems")
+					.show();
 			})
 			.always(function ajaxAlwaysDoThis(data) {
 				// Always do
@@ -256,7 +270,9 @@ $(document)
 				}
 			})
 			.fail(function ajaxFailed(e) {
-				// This failed
+				$error
+					.html("Connection problems")
+					.show();
 			})
 			.always(function ajaxAlwaysDoThis(data) {
 				// Always do
@@ -296,7 +312,59 @@ $(document)
 				}
 			})
 			.fail(function ajaxFailed(e) {
-				// This failed
+				$error
+					.html("Connection problems")
+					.show();
+			})
+			.always(function ajaxAlwaysDoThis(data) {
+				// Always do
+				//console.log('Always');
+			})
+	})
+	.on("submit", "form.edit-article", function(event) {
+		event.preventDefault();
+
+		var $form = $(this);
+		var $message = $(".js-message", $form);
+		var $error = $("p.js-error");
+
+
+		var dataObj = {
+			article_id: $form.attr("article_id"),
+			title: $(".title", $form).val(),
+			articleText: $(".article-text", $form).val()
+		};
+
+		$error.hide();
+
+
+		$.ajax({
+			type: 'POST',
+			url: '/ajax/changearticle.php',
+			data: dataObj,
+			dataType: 'json',
+			async: true,
+		})
+			.done(function ajaxDone(data) {
+				// Whatever data is
+				if (data.redirect !== undefined) {
+					//window.location = data.redirect;
+				}
+				else if (data.status !== undefined){
+					$message
+						.text(data.status)
+						.show();
+				}
+				else if (data.error !== undefined) {
+					$error
+						.text(data.error)
+						.show();
+				}
+			})
+			.fail(function ajaxFailed(e) {
+				$error
+					.html("Connection problems")
+					.show();
 			})
 			.always(function ajaxAlwaysDoThis(data) {
 				// Always do
