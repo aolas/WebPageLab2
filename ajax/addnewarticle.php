@@ -12,7 +12,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $return = [];
     $title = Filter::String( $_POST['title'] );
-    $articleText = Filter::String($_POST['articleText']);
+    //$articleText = Filter::String($_POST['articleText']);
+    $articleText = $_POST['articleText'];
     $userId = Page::currentUser();
 
     if(strlen ($articleText) > 0 && strlen ($title)> 0 ) {

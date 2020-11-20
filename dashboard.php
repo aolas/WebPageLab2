@@ -26,10 +26,13 @@
   <?php require_once "inc/navbar.php"; ?>
   	<div class="uk-section uk-container">
         <h2>Dashboard</h2>
-        <p>Hello <?php echo $User->name; ?>, you registered at <?php echo $User->reg_time; ?></p>
+
+        <p>Hello <?php echo $User->name; ?>, you registered at <?php echo date("Y-m-d H:i:s", strtotime($User->reg_time)); ?></p>
+
         <ul class="uk-subnav uk-subnav-pill" uk-switcher>
             <li><a href="#">Email and Name</a></li>
             <li><a href="#">Password</a></li>
+            <li><a href="#">User list</a></li>
         </ul>
 
         <ul class="uk-switcher uk-margin">
@@ -76,6 +79,30 @@
                         <button class="uk-button uk-button-default" type="submit">Change</button>
                     </div>
                 </form>
+            </li>
+            <li>
+                <button onclick="window.print()">Print</button>
+                <table class="uk-table uk-table-responsive uk-table-divider">
+                    <thead>
+                    <tr>
+                        <th>User id</th>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Registration time</th>
+                        <th>Password hash</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $arrValues = $User::getUserList();
+                    foreach ($arrValues as $row) {
+                            echo "<tr>
+                                <td>",$row['user_id'],"</td><td>",$row['name'],"</td><td>",$row['email'],"</td> <td>",date("Y-m-d H:i:s",strtotime( $row['reg_time'])) ,"</td><td>",$row['password'],"</td>
+                                </tr>";
+                    } ?>
+
+                    </tbody>
+                </table>
             </li>
         </ul>
 

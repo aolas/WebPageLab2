@@ -139,6 +139,16 @@ class User {
 		$user_found = (boolean) $findUser->rowCount();
 		return $user_found;
 	}
+	public static function getUserList() {
+		$con = DB::getConnection();
+		try {
+			$allUsers = $con->prepare("SElECT * FROM users");
+			$allUsers->execute();
+		} catch (PDOException $e){
+
+		}
+		return $allUsers;
+	}
 
 
 }

@@ -128,11 +128,11 @@ $(document)
 		var $error = $(".js-error", $form);
 		var $message = $(".js-message", $form);
 
+		const data = editor.getData();
 		var dataObj = {
 			title: $(".title", $form).val(),
-			articleText: $(".article-text", $form).val()
+			articleText: data
 		};
-
 
 		// Assuming the code gets this far, we can start the ajax process
 		$error.hide();
@@ -328,12 +328,13 @@ $(document)
 		var $message = $(".js-message", $form);
 		var $error = $("p.js-error");
 
-
+		const data = editor.getData();
 		var dataObj = {
 			article_id: $form.attr("article_id"),
 			title: $(".title", $form).val(),
-			articleText: $(".article-text", $form).val()
+			articleText: data
 		};
+
 
 		$error.hide();
 

@@ -68,7 +68,8 @@ class Article {
         $connectin = DB::getConnection();
         $article_id = Filter::Int( $article_id );
         $title = Filter::String($title);
-        $article_text = Filter::String($article_text);
+        //$article_text = Filter::String($article_text);
+
         $wordcount = count(preg_split('~[^\p{L}\p{N}\']+~u',$article_text));
         $return = [];
 

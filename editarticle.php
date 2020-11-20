@@ -39,9 +39,8 @@ Page::ForceLogin();
                         </div>
 
                         <div class="uk-margin">
-                            <textarea class="uk-textarea article-text" required="required" rows="10" placeholder="Textarea">',$article->article_text,'</textarea>
+                            <textarea id="editor" class="uk-textarea article-text"  rows="10" placeholder="Textarea">',$article->article_text,'</textarea>
                         </div>
-
                         <div class="uk-margin uk-alert uk-alert-danger js-error" style="display: none;"></div>
                         <div class="uk-margin uk-alert uk-alert-success js-message" style="display: none;"></div>
 
@@ -60,6 +59,9 @@ Page::ForceLogin();
 
 
 </div>
+<?php require_once "inc/requereditor.php"; ?>
 <?php require_once "inc/footer.php"; ?>
+
+
 </body>
 </html>
