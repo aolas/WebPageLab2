@@ -13,24 +13,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="Update">
-      <change afterPath="$PROJECT_DIR$/ajax/addcomment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ajax/generatereport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/classes/Comment.php" afterDir="false" />
+    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="added comment support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/addnewarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/addnewarticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/Page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managearticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/managearticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/readarticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +119,7 @@
       <workItem from="1605616689410" duration="2149000" />
       <workItem from="1605814484723" duration="2314000" />
       <workItem from="1605853384613" duration="23546000" />
-      <workItem from="1605939904597" duration="27912000" />
+      <workItem from="1605939904597" duration="28783000" />
     </task>
     <task id="LOCAL-00001" summary="Added registration and login forms">
       <created>1604089213000</created>
@@ -214,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605906377424</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added comment support">
+      <created>1605972541856</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605972541856</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +236,8 @@
     <MESSAGE value="Added article edit" />
     <MESSAGE value="Added aditional statistic to manige article" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="added comment support" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comment support" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="194" key="#CLI_Interpreters" timestamp="1603999827544">
@@ -332,10 +324,10 @@
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605616744862" />
     <state x="1946" y="196" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1604908797697" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605814652887" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605906396252">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605972548752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605906396252" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605972548752" />
     <state x="808" y="249" key="ftp.server.browser" timestamp="1605615676310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
