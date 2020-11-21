@@ -37,8 +37,7 @@ $stats = Article::articleStats();
     </div>
     <ul class="uk-subnav uk-subnav-pill" uk-switcher>
         <li><a href="#">New article</a></li>
-<!--        <li><a href="#">Edit article</a></li>-->
-<!--        <li><a href="#">Delete article</a></li>-->
+        <li><a href="#">Manage article</a></li>
     </ul>
 
     <ul class="uk-switcher uk-margin">
@@ -72,13 +71,15 @@ $stats = Article::articleStats();
 
             <?php
             $arrValues = Article::getArticles();
-            foreach ($arrValues as $row){
-                echo  '<li>' ,  $row['title'] , "</li> <br>" ;
+            foreach ($arrValues as $article){
+                echo  '<li><a href="/editarticle.php?article=',$article->article_id,'" uk-icon="icon: file-edit"></a>' ,  $article->title , '<a href="#" class="delete-article" article=',$article->article_id,' uk-icon="icon: trash"></a></li> <br>' ;
 
             }
             ?>
             </ul>
+
         </li>
+
     </ul>
 
 

@@ -17,10 +17,12 @@ $(document)
 
 	var $form = $(this);
 	var $error = $(".js-error", $form);
+	var $password = $(".password",$form);
+	var $confirm_password = $(".comfirm-password",$form);
 
 	var dataObj = {
 		email: $("input[type='email']", $form).val(),
-		password: $(".password", $form).val()
+		password: $password.val()
 	};
 
 	if(!ValidateEmail(dataObj.email)) {
@@ -33,6 +35,11 @@ $(document)
 			.text("Please enter a passphrase that is at least 8 characters long.")
 			.show();
 		return false;
+	} else if ($password.val().localeCompare($confirm_password.val())!=0){
+		$error
+			.text("Password and comfirm password do not match")
+			.show();
+		return false
 	}
 	$error.hide();
 
@@ -321,6 +328,41 @@ $(document)
 				//console.log('Always');
 			})
 	})
+	.on("click", ".delete-article", function(event) {
+		event.preventDefault();
+		var $item = $(this);
+
+
+		var dataObj = {
+			article_id: $item.attr('article')
+		};
+
+
+
+
+		$.ajax({
+			type: 'POST',
+			url: '/ajax/removearticle.php',
+			data: dataObj,
+			dataType: 'json',
+			async: true,
+		})
+			.done(function ajaxDone(data) {
+				// Whatever data is
+				if (data.error !== undefined) {
+					alert("Incorrect data provided");
+				}
+				//alert(data.status);
+				$item.parent().remove();
+			})
+			.fail(function ajaxFailed(e) {
+				alert("Connection problem");
+			})
+			.always(function ajaxAlwaysDoThis(data) {
+				// Always do
+				//console.log('Always');
+			})
+	})
 	.on("submit", "form.edit-article", function(event) {
 		event.preventDefault();
 
@@ -371,4 +413,56 @@ $(document)
 				// Always do
 				//console.log('Always');
 			})
+	})
+	.on("submit", "form.add-comment", function(event) {
+		event.preventDefault();
+
+		var $form = $(this);
+		var $data = $(".comment-text",$form)
+		var $error = $(".js-error", $form);
+		var $message = $(".js-message", $form);
+
+
+		//const data = editor.getData();
+		var dataObj = {
+			article_id: $form.attr("article_id"),
+			comment: $data.val()
+		};
+		// Assuming the code gets this far, we can start the ajax process
+		$error.hide();
+		$message.hide();
+
+		$.ajax({
+			type: 'POST',
+			url: '/ajax/addcomment.php',
+			data: dataObj,
+			dataType: 'json',
+			async: true,
+		})
+			.done(function ajaxDone(data) {
+				// Whatever data is
+				if(data.redirect !== undefined) {
+					window.location = data.redirect;
+				}else if(data.status !== undefined){
+					$message
+						.text(data.status)
+						.show();
+				} else if(data.error !== undefined) {
+					$error
+						.html(data.error)
+						.show();
+				}
+			})
+			.fail(function ajaxFailed(e) {
+				$error
+					.html("Connection problems")
+
+					.show();
+			})
+			.always(function ajaxAlwaysDoThis(data) {
+				// Always do
+				//console.log('Always');
+			})
+
+		return false;
 	})

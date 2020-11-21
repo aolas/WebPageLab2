@@ -13,49 +13,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="Added aditional statistic to manige article">
-      <change afterPath="$PROJECT_DIR$/assets/js/initeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/editor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/requereditor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="Update">
+      <change afterPath="$PROJECT_DIR$/ajax/addcomment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/generatereport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inc/classes/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/addnewarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/addnewarticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-utilities.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-utilities.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-utilities.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap-utilities.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.esm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.esm.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.esm.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/editarticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editor.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/classes/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/classes/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/Page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managearticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/managearticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/readarticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +134,8 @@
       <workItem from="1605615250304" duration="1272000" />
       <workItem from="1605616689410" duration="2149000" />
       <workItem from="1605814484723" duration="2314000" />
-      <workItem from="1605853384613" duration="23286000" />
+      <workItem from="1605853384613" duration="23546000" />
+      <workItem from="1605939904597" duration="27912000" />
     </task>
     <task id="LOCAL-00001" summary="Added registration and login forms">
       <created>1604089213000</created>
@@ -231,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605814591984</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update">
+      <created>1605906377424</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605906377424</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +244,8 @@
     <MESSAGE value="Added added remove article function" />
     <MESSAGE value="Added article edit" />
     <MESSAGE value="Added aditional statistic to manige article" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added aditional statistic to manige article" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="194" key="#CLI_Interpreters" timestamp="1603999827544">
@@ -296,10 +280,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604398531171" />
-    <state x="727" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605468493841">
+    <state x="727" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605972267977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="727" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605468493841" />
+    <state x="727" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605972267977" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605860982463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -333,14 +317,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604348146556" />
-    <state x="730" y="242" key="NewPhpClassDialog" timestamp="1604122814466">
+    <state x="730" y="242" key="NewPhpClassDialog" timestamp="1605942945354">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="730" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1604122814466" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1605865778973">
+    <state x="730" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605942945354" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1605971546372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605865778973" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605971546372" />
     <state x="2460" y="389" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1605160181178" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1605814652887">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -348,10 +332,10 @@
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605616744862" />
     <state x="1946" y="196" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1604908797697" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605814652887" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605470976205">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605906396252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605470976205" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605906396252" />
     <state x="808" y="249" key="ftp.server.browser" timestamp="1605615676310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

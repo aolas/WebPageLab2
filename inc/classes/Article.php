@@ -14,7 +14,7 @@ class Article {
     public $user_id;
     public $title;
     public $article_text;
-    public $reg_time;
+    public $publication_time;
 
     public function __construct(int $article_id) {
         $this->con = DB::getConnection();
@@ -39,12 +39,35 @@ class Article {
             header("Location: /index.php"); exit;
         }
     }
+    public static function addNewArticles($title,$articleText){
+        $return = [];
+        if(strlen ($articleText) > 0 && strlen ($title)> 0 ) {
+            $title = Filter::String($title);
+            $userId = Page::currentUser();
+            $con = DB::getConnection();
+            $wordcount = count(preg_split('~[^\p{L}\p{N}\']+~u',$articleText));
+            try{
+                $addArticle = $con->prepare("INSERT INTO articles(title, article_text,wordcount, user_id) VALUES(:title, :article_text,:wordcount, :user_id)");
+                $addArticle->bindParam(':title', $title, PDO::PARAM_STR);
+                $addArticle->bindParam(':article_text', $articleText, PDO::PARAM_STR);
+                $addArticle->bindParam(':user_id', $userId, PDO::PARAM_INT);
+                $addArticle->bindParam(':wordcount', $wordcount, PDO::PARAM_INT);
+                $addArticle->execute();
+                $return['status']= "Article added";
+            } catch (PDOException $e){
+                $return['error']="Request error";
+            }
+        } else{
+            $return['error']= "Can't be emty title or article field";
+        }
+        return $return;
+    }
 
     public static function getArticles() {
         $connectin = DB::getConnection();
         $articles = $connectin->prepare("SELECT article_id, user_id, title, SUBSTRING(article_text,1,200) as article_text , publication_time FROM articles");
         $articles->execute();
-        return $articles->fetchAll();
+        return $articles->fetchAll(PDO::FETCH_OBJ);
     }
     public static function removeArticle($article_id ) {
 

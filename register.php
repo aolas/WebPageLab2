@@ -43,7 +43,7 @@
                 <div class="uk-margin">
                     <label class="uk-form-label" for="comfirm-password">Comfirm password</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="comfirm-password" type="password" required='required' placeholder="Comfirm password">
+                        <input class="uk-input comfirm-password" type="password" required='required' placeholder="Comfirm password">
                     </div>
                 </div>
 

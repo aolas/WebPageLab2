@@ -33,6 +33,7 @@
             <li><a href="#">Email and Name</a></li>
             <li><a href="#">Password</a></li>
             <li><a href="#">User list</a></li>
+            <li><a href="#">Reports</a></li>
         </ul>
 
         <ul class="uk-switcher uk-margin">
@@ -103,6 +104,46 @@
 
                     </tbody>
                 </table>
+            </li>
+            <li>
+                Generate report
+                <?php
+                $arrUsers = User::getUserIdAndEmailList();
+
+                ?>
+                <form>
+                    <div class="uk-margin">
+                        <div uk-form-custom="target: > * > span:first-child">
+                            <select>
+
+                                <option value="">Please select...</option>
+                                <?php
+                                foreach ($arrUsers as $user){
+                                    echo '<option value="',$user->user_id,'">',$user->email,'</option>';
+                                }
+                                ?>
+                            </select>
+                            <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                <span></span>
+                                <span uk-icon="icon: chevron-down"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div uk-form-custom="target: > * > span:first-child">
+                            <select>
+                                <option value="">Please select...</option>
+                                <option value="1">Articles</option>
+                                <option value="2">Comments</option>
+                            </select>
+                            <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                <span></span>
+                                <span uk-icon="icon: chevron-down"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
             </li>
         </ul>
 

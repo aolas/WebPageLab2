@@ -25,21 +25,21 @@
         <?php
 
         $arrValues = Article::getArticles();
-        foreach ($arrValues as $row) {
+        foreach ($arrValues as $article) {
 
             echo ' 
       <div class="uk-box-shadow-bottom uk-box-shadow-xlarge uk-container container">
           <div class="uk-background-default uk-padding-large">
               <article class="uk-article">
-                  <h1 class="uk-article-title"><a class="uk-link-reset" href="/readarticle.php?article=',$row['article_id'],'">', $row['title'],'</a></h1>
-                  <p class="uk-article-meta">Written by <a href="#">',User::FindName($row['user_id']),'</a> ',$row['publication_time'],'. Posted in <a href="#">Blog</a></p>
-                  <p class="uk-text-lead">',$row['article_text'],'</p>
+                  <h1 class="uk-article-title"><a class="uk-link-reset" href="/readarticle.php?article=',$article->article_id,'">', $article->title,'</a></h1>
+                  <p class="uk-article-meta">Written by <a href="#">',User::FindName($article->user_id),'</a> ',$article->publication_time,'. Posted in <a href="#">Blog</a></p>
+                  <p class="uk-text-lead">',$article->article_text,'</p>
                   <div class="uk-grid-small uk-child-width-auto" uk-grid>
                       <div>
-                          <a class="uk-button uk-button-text" href="/readarticle.php?article=',$row['article_id'],'">Read more</a>
+                          <a class="uk-button uk-button-text" href="/readarticle.php?article=',$article->article_id,'">Read more</a>
                       </div>
                       <div>
-                          <a class="uk-button uk-button-text" href="#">5 Comments</a>
+                          <a class="uk-button uk-button-text" href="#">',Comment::numberOfCommentsByArticle($article->article_id),' Comments</a>
                       </div>
                   </div>
               </article>

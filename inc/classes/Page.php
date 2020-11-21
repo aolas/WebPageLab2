@@ -37,6 +37,12 @@ class Page {
 			return Filter::Int($_SESSION['user_id']);
 		}
 	}
+	static function getEncrypOptions(){
+		$options = [
+			'cost' => 12,
+		];
+		return $options;
+	}
 }
 
 

@@ -37,7 +37,31 @@ class User {
 			header("Location: /logout.php"); exit;
 		}
 	}
+	public static function addUser($email,$password){
+		$user_found = User::Find($email);
+		$return = [];
+		if($user_found) {
+			// User exists
 
+			$return['error'] = "You already have an account";
+			$return['is_logged_in'] = false;
+		} else {
+			$password = password_hash($password, PASSWORD_BCRYPT, Page::getEncrypOptions());
+			$con = DB::getConnection();
+			$addUser = $con->prepare("INSERT INTO users(email, password) VALUES(LOWER(:email), :password)");
+			$addUser->bindParam(':email', $email, PDO::PARAM_STR);
+			$addUser->bindParam(':password', $password, PDO::PARAM_STR);
+			$addUser->execute();
+
+			$user_id = $con->lastInsertId();
+
+			$_SESSION['user_id'] = (int) $user_id;
+
+			$return['redirect'] = '/dashboard.php?message=welcome';
+			$return['is_logged_in'] = true;
+		}
+		return $return;
+	}
 	public static function changeNameEmail($new_email,$new_name) {
 		$con = DB::getConnection();
 		$email = (string) Filter::String( $new_email );
@@ -60,10 +84,6 @@ class User {
 	}
 
 	public static function changePassword($currentPassword,$newPassword) {
-		$options = [
-			'cost' => 12,
-		];
-
 		$con = DB::getConnection();
 
 
@@ -73,7 +93,7 @@ class User {
 		$uid = (int) $user_found['user_id'];
 
 		if(password_verify($currentPassword, $hash)) {
-			$password = password_hash($newPassword, PASSWORD_BCRYPT, $options);
+			$password = password_hash($newPassword, PASSWORD_BCRYPT, Page::getEncrypOptions());
 			try {
 				$updateUser = $con->prepare("UPDATE users SET password=:password WHERE user_id=:user_id");
 				$updateUser->bindParam(':user_id',$uid, PDO::PARAM_INT);
@@ -149,6 +169,17 @@ class User {
 		}
 		return $allUsers;
 	}
+	public static function getUserIdAndEmailList() {
+		$con = DB::getConnection();
+		try {
+			$allUsers = $con->prepare("SElECT user_id,email FROM users");
+			$allUsers->execute();
+		} catch (PDOException $e){
+			return null;
+		}
+		return $allUsers->fetchAll(PDO::FETCH_OBJ);
+	}
+
 
 
 }
