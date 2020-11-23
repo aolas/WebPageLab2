@@ -34,6 +34,7 @@
             <li><a href="#">Password</a></li>
             <li><a href="#">User list</a></li>
             <li><a href="#">Reports</a></li>
+            <li><a href="#">Cookies and files</a></li>
         </ul>
 
         <ul class="uk-switcher uk-margin">
@@ -98,7 +99,7 @@
                     $arrValues = $User::getUserList();
                     foreach ($arrValues as $row) {
                             echo "<tr>
-                                <td>",$row['user_id'],"</td><td>",$row['name'],"</td><td>",$row['email'],"</td> <td>",date("Y-m-d H:i:s",strtotime( $row['reg_time'])) ,"</td><td>",$row['password'],"</td>
+                                <td>",$row->user_id,"</td><td>",$row->name,"</td><td>",$row->email,"</td> <td>",date("Y-m-d H:i:s",strtotime( $row->reg_time)) ,"</td><td>",$row->password,"</td>
                                 </tr>";
                     } ?>
 
@@ -111,39 +112,55 @@
                 $arrUsers = User::getUserIdAndEmailList();
 
                 ?>
-                <form>
-                    <div class="uk-margin">
-                        <div uk-form-custom="target: > * > span:first-child">
-                            <select>
-
-                                <option value="">Please select...</option>
+                <form class="uk-grid-small report" uk-grid >
+                    <div class="uk-width-1-2@s uk-grid-margin">
+                        <label class="uk-form-label" for="form-horizontal-select">User</label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select user" id="form-horizontal-select ">
                                 <?php
                                 foreach ($arrUsers as $user){
                                     echo '<option value="',$user->user_id,'">',$user->email,'</option>';
                                 }
                                 ?>
                             </select>
-                            <button class="uk-button uk-button-default" type="button" tabindex="-1">
-                                <span></span>
-                                <span uk-icon="icon: chevron-down"></span>
-                            </button>
                         </div>
                     </div>
-                    <div class="uk-margin">
-                        <div uk-form-custom="target: > * > span:first-child">
-                            <select>
-                                <option value="">Please select...</option>
-                                <option value="1">Articles</option>
-                                <option value="2">Comments</option>
+                    <div class="uk-width-1-2@s uk-grid-margin">
+                        <label class="uk-form-label" for="form-horizontal-select">Category</label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select category" id="form-horizontal-select">
+                                <option value=1 >Articles</option>
+                                <option value=2 >Comments</option>
                             </select>
-                            <button class="uk-button uk-button-default" type="button" tabindex="-1">
-                                <span></span>
-                                <span uk-icon="icon: chevron-down"></span>
-                            </button>
                         </div>
                     </div>
 
+
+                    <div class="uk-width-1-6@s uk-grid-margin">
+                        <button class="uk-button uk-button-default" type="submit">Get report</button>
+                    </div>
+                    <div class="uk-width-1-1@s uk-grid-margin uk-alert uk-alert-danger js-error" style="display: none;"></div>
+                    <div class="uk-width-1-1@s uk-grid-margin uk-alert uk-alert-success js-message" style="display: none;"></div>
+
                 </form>
+                <table id="results" class="uk-table uk-table-striped report-data">
+                    <thead >
+
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p uk-margin>
+
+                    <button class="uk-button uk-button-default">Add message to cookie</button>
+                    <button class="uk-button uk-button-default">Add message to file</button>
+                    <button class="uk-button uk-button-default">read cookie and file</button>
+
+                </p>
+
             </li>
         </ul>
 

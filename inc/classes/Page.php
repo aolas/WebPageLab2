@@ -43,6 +43,12 @@ class Page {
 		];
 		return $options;
 	}
+	static function readFile(){
+		$myfile = fopen("newfile.txt", "r") or die("Unable to open file!");
+		$data = fread($myfile,filesize("newfile.txt"));
+		fclose($myfile);
+		return $data;
+	}
 }
 
 

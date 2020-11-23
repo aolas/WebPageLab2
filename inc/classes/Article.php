@@ -69,6 +69,19 @@ class Article {
         $articles->execute();
         return $articles->fetchAll(PDO::FETCH_OBJ);
     }
+    public static function getByUserArticles($user_id) {
+        $connectin = DB::getConnection();
+        $user_id = Filter::Int($user_id);
+        try{
+            $articles = $connectin->prepare("SELECT article_id, title, wordcount,  publication_time FROM articles WHERE user_id=:user_id");
+            $articles->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+            $articles->execute();
+        } catch (PDOException $e){
+
+        }
+
+        return $articles->fetchAll(PDO::FETCH_OBJ);
+    }
     public static function removeArticle($article_id ) {
 
 //        DELETE FROM books WHERE author_id = '2034';
@@ -128,27 +141,6 @@ class Article {
         return $return;
         //SELECT COUNT(*) FROM articles;
     }
-
-
-//    public static function Find($email, $return_assoc = false) {
-//
-//        $con = DB::getConnection();
-//
-//        $email = (string) Filter::String( $email );
-//
-//        $findUser = $con->prepare("SELECT user_id, password FROM users WHERE email = LOWER(:email) LIMIT 1");
-//        $findUser->bindParam(':email', $email, PDO::PARAM_STR);
-//        $findUser->execute();
-//
-//
-//        if($return_assoc) {
-//            return $findUser->fetch(PDO::FETCH_ASSOC);
-//        }
-//
-//        $user_found = (boolean) $findUser->rowCount();
-//        return $user_found;
-//    }
-
 
 }
 ?>

@@ -466,3 +466,99 @@ $(document)
 
 		return false;
 	})
+	.on("submit", "form.report", function(event) {
+		event.preventDefault();
+
+		var $form = $(this);
+
+		var $error = $(".js-error", $form);
+		$message = $(".js-message", $form)
+		var $user = $(".user", $form);
+		var category = $(".category",$form).val();
+		//const data = editor.getData();
+		var dataObj = {
+			option: category,
+			user_id: $user.val()
+		};
+		// Assuming the code gets this far, we can start the ajax process
+		$error.hide();
+		$message.hide();
+
+		$.ajax({
+			type: 'POST',
+			url: '/ajax/generatereport.php',
+			data: dataObj,
+			dataType: 'json',
+			async: true,
+		})
+			.done(function ajaxDone(data) {
+				// Whatever data is
+				if(data.redirect !== undefined) {
+					window.location = data.redirect;
+				}else if(data.status !== undefined){
+					$message
+						.text(data.status)
+						.show();
+				} else if(data.error !== undefined) {
+					$error
+						.html(data.error)
+						.show();
+				} else{
+					var count = Object.keys(data).length;
+					var $resultsTh = $("#results thead");
+					var $resultsTb = $("#results tbody");
+					var row = "";
+					$resultsTb.empty();
+					$resultsTh.empty();
+					if (category == 1){
+						$resultsTh.append("<tr>\n" +
+							"                        <th>Article ID</th>\n" +
+							"                        <th>Title</th>\n" +
+							"                        <th>Word count</th>\n" +
+							"                        <th>Publication time</th>\n" +
+							"                    </tr>");
+						Object.keys(data).forEach(function(index){
+							console.log(data[index]);
+							row += "<tr><td>" + data[index]['article_id'] +
+								"</td><td>" + data[index]['title'] + "</td><td>"
+								+ data[index]['wordcount'] + "</td><td>"
+								+ data[index]['publication_time']
+								+"</td></tr>"
+						});
+						$resultsTb.append(row);
+					}
+					else if (category == 2){
+						$resultsTh.append("<tr>\n" +
+						"                        <th>Comment ID</th>\n" +
+						"                        <th>User ID</th>\n" +
+						"                        <th>Article ID</th>\n" +
+						"                        <th>Comment</th>\n" +
+						"                        <th>Posting time</th>\n" +
+						"                    </tr>");
+						Object.keys(data).forEach(function(index,value){
+						//console.log(value);
+							console.log(data[index]);
+							row += "<tr><td>" + data[index]['comment_id'] +
+								"</td><td>" + data[index]['user_id'] + "</td><td>"
+								+ data[index]['article_id'] + "</td><td>"
+								+ data[index]['comment'] + "</td><td>"
+								+ data[index]['publication_time']
+								+"</td></tr>"
+						});
+						$resultsTb.append(row);
+					}
+				}
+			})
+			.fail(function ajaxFailed(e) {
+				$error
+					.html("Connection problems")
+
+					.show();
+			})
+			.always(function ajaxAlwaysDoThis(data) {
+				// Always do
+				//console.log('Always');
+			})
+
+		return false;
+	})

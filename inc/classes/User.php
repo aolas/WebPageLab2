@@ -167,7 +167,7 @@ class User {
 		} catch (PDOException $e){
 
 		}
-		return $allUsers;
+		return $allUsers->fetchAll(PDO::FETCH_OBJ);;
 	}
 	public static function getUserIdAndEmailList() {
 		$con = DB::getConnection();

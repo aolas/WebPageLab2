@@ -90,5 +90,19 @@ class Comment
 
         //SELECT COUNT(*) FROM articles;
     }
+    public static function getCommentsByuser($user_id) {
+        $connectin = DB::getConnection();
+        $user_id = Filter::Int( $user_id );
+        $return = [];
+        try{
+            $getComments = $connectin->prepare("SELECT * FROM comments WHERE user_id = :user_id");
+            $getComments->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+            $getComments->execute();
+            return $getComments->fetchAll(PDO::FETCH_OBJ);
+        } catch (PDOException $e){
+            return null;
+        }
+
+    }
 }
 ?>

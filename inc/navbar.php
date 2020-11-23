@@ -10,6 +10,7 @@ if(!defined('__CONFIG__')) {
         <div class="uk-navbar-center-left"><div>
                 <ul class="uk-navbar-nav">
                     <li><a href="/index.php">Home</a></li>
+                    <li><a href="/map.php">Page map</a></li>
                     <li><a href="/requirements.php">Requirements</a></li>
 
                 </ul>
@@ -24,6 +25,8 @@ if(!defined('__CONFIG__')) {
                         // The user is allowed here
                         echo '<li> <a href="/managearticle.php">Articles</a> </li>';
                         echo '<li> <a href="/dashboard.php">Dashboard</a> </li>';
+                        echo '<li> <a href="/map.php">Map</a> </li>';
+                        echo '<li> <a href="/about.php">About</a> </li>';
                         echo '<li> <a href="/logout.php">Log out</a> </li>';
 
                     } else {
