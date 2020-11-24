@@ -153,20 +153,22 @@
                 </table>
             </li>
             <li>
-                <p uk-margin>
+                <p uk-margin class="containeractions">
 
-                    <button class="uk-button uk-button-default">Add message to cookie</button>
-                    <button class="uk-button uk-button-default">Add message to file</button>
-                    <button class="uk-button uk-button-default">read cookie and file</button>
+                    <button class="uk-button uk-button-default add-cookie">Add message to cookie</button>
+                    <button class="uk-button uk-button-default add-message">Add timestamp to file</button>
+                    <button class="uk-button uk-button-default read-data">read cookie and file</button>
 
+                    <div class="uk-margin uk-alert uk-alert-danger" id="js-error" style='display: none;'></div>
+                    <div class="uk-margin uk-alert uk-alert-success " id="js-message" style='display: none;'></div>
                 </p>
 
             </li>
         </ul>
 
 
+        <?php require_once "inc/footer.php"; ?>
+    </div>
 
-  	</div>
-  	<?php require_once "inc/footer.php"; ?> 
   </body>
 </html>

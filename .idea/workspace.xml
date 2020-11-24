@@ -13,18 +13,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="Added uikit to local">
-      <change afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map.php" afterDir="false" />
+    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="editor">
+      <change afterPath="$PROJECT_DIR$/ajax/adddatatofile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ajax/readdata.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/generatereport.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/generatereport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/editarticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managearticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/managearticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.php" beforeDir="false" afterPath="$PROJECT_DIR$/map.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/readarticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +71,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -137,6 +143,8 @@
       <workItem from="1605939904597" duration="29033000" />
       <workItem from="1606073593484" duration="739000" />
       <workItem from="1606113695726" duration="21426000" />
+      <workItem from="1606165168832" duration="184000" />
+      <workItem from="1606199612541" duration="13402000" />
     </task>
     <task id="LOCAL-00001" summary="Added registration and login forms">
       <created>1604089213000</created>
@@ -236,7 +244,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606073653917</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="about page">
+      <created>1606165257677</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1606165257677</updated>
+    </task>
+    <task id="LOCAL-00016" summary="editor">
+      <created>1606165301562</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1606165301562</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +292,9 @@
     <MESSAGE value="added comment support" />
     <MESSAGE value="Added uikit to local" />
     <MESSAGE value="added Editor with styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Editor with styles" />
+    <MESSAGE value="about page" />
+    <MESSAGE value="editor" />
+    <option name="LAST_COMMIT_MESSAGE" value="editor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="194" key="#CLI_Interpreters" timestamp="1603999827544">
@@ -350,10 +374,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="730" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605942945354" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1606141615910">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1606204189718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1606141615910" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1606204189718" />
     <state x="2460" y="389" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1605160181178" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1605814652887">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -361,10 +385,10 @@
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605616744862" />
     <state x="1946" y="196" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1604908797697" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605814652887" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606073658770">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606165310534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1606073658770" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1606165310534" />
     <state x="808" y="249" key="ftp.server.browser" timestamp="1605615676310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

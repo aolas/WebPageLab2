@@ -1,3 +1,7 @@
+<footer class="uk-align-center" >
+    Page created 2020 by Ramūnas
+</footer>
+
 <!-- jQuery is required -->
 <script src="/assets/js/jquery.min.js"></script>
 

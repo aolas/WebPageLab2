@@ -82,10 +82,10 @@ $stats = Article::articleStats();
 
     </ul>
 
+    <?php require_once "inc/footer.php"; ?>
 
 </div>
 
-<?php require_once "inc/footer.php"; ?>
 <?php require_once "inc/requereditor.php"; ?>
 
 </body>

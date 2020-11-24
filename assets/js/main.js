@@ -561,4 +561,120 @@ $(document)
 			})
 
 		return false;
+	}).on("click", ".add-cookie", function(event) {
+		var $error = $("#js-error");
+		var $message = $("#js-message");
+		document.cookie = 'My-personal-cookie = Cookie value';
+		$error.hide();
+		$message.hide();
+		$message.html("Cookie is set").show();;
+
+		//alert($message.val());
+
+
 	})
+	.on("click", ".add-message", function(event) {
+		event.preventDefault();
+		//
+		var $cantainer = $(".containeractions");
+		var $error = $("#js-error");
+		var $message = $("#js-message");
+
+
+		//const data = editor.getData();
+		var dataObj = {
+			data: ""
+		};
+		// Assuming the code gets this far, we can start the ajax process
+		$error.hide();
+		$message.hide();
+
+		$.ajax({
+			type: 'POST',
+			url: '/ajax/adddatatofile.php',
+			data: dataObj,
+			dataType: 'json',
+			async: true,
+		})
+			.done(function ajaxDone(data) {
+				// Whatever data is
+				if(data.redirect !== undefined) {
+					window.location = data.redirect;
+				}else if(data.status !== undefined){
+					$message
+						.text(data.status)
+						.show();
+				} else if(data.error !== undefined) {
+					$error
+						.html(data.error)
+						.show();
+				}
+			})
+			.fail(function ajaxFailed(e) {
+				$error
+					.html("Connection problems")
+
+					.show();
+			})
+			.always(function ajaxAlwaysDoThis(data) {
+				// Always do
+				//console.log('Always');
+			})
+
+		return false;
+	})
+	.on("click", ".read-data", function(event) {
+		event.preventDefault();
+		//
+		var $cantainer = $(".containeractions");
+		var $error = $("#js-error");
+		var $message = $("#js-message");
+
+
+		//const data = editor.getData();
+		var dataObj = {
+			data: ""
+		};
+		// Assuming the code gets this far, we can start the ajax process
+		$error.hide();
+		$message.hide();
+
+		$.ajax({
+			type: 'POST',
+			url: '/ajax/readdata.php',
+			data: dataObj,
+			dataType: 'json',
+			async: true,
+		})
+			.done(function ajaxDone(data) {
+				// Whatever data is
+				if(data.redirect !== undefined) {
+					window.location = data.redirect;
+				}else if(data.status !== undefined){
+					$message
+						.append(data.cookie + "<br> data in the file <br>" + data.file)
+						.show();
+				} else if(data.error !== undefined) {
+					$error
+						.html(data.error)
+						.show();
+				}
+			})
+			.fail(function ajaxFailed(e) {
+				$error
+					.html("Connection problems")
+
+					.show();
+			})
+			.always(function ajaxAlwaysDoThis(data) {
+				// Always do
+				//console.log('Always');
+			})
+
+		return false;
+	})
+/*
+$(".actions.add-cookie").click(function(){
+	console.log("assas");
+});
+*/

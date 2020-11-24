@@ -170,7 +170,8 @@ require_once "inc/config.php";
                     (</b><i>reikės pagrįsti kodėl naudojama</i><b>) </b>stilių tipus.</p><strong>Darbas ginamas pristatant, kas buvo realizuota, atsakant į pateiktus klausimus.</strong><br><p></p></div>
 
     </div>
+    <?php require_once "inc/footer.php"; ?>
 </div>
-<?php require_once "inc/footer.php"; ?>
+
 </body>
 </html>

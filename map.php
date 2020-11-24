@@ -41,7 +41,8 @@ require_once "inc/config.php";
         <li> <a href="/login.php">Log in</a> </li>
         <li> <a href="/register.php">Register</a> </li>
     </ul>
+    <?php require_once "inc/footer.php"; ?>
+
 </div>
-<?php require_once "inc/footer.php"; ?>
 </body>
 </html>
