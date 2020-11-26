@@ -651,8 +651,9 @@ $(document)
 				if(data.redirect !== undefined) {
 					window.location = data.redirect;
 				}else if(data.status !== undefined){
+					$message.html("");
 					$message
-						.append(data.cookie + "<br> data in the file <br>" + data.file)
+						.append(data.cookie + "1<br> data in the file <br>" + data.file)
 						.show();
 				} else if(data.error !== undefined) {
 					$error
@@ -663,7 +664,6 @@ $(document)
 			.fail(function ajaxFailed(e) {
 				$error
 					.html("Connection problems")
-
 					.show();
 			})
 			.always(function ajaxAlwaysDoThis(data) {
@@ -672,9 +672,5 @@ $(document)
 			})
 
 		return false;
-	})
-/*
-$(".actions.add-cookie").click(function(){
-	console.log("assas");
-});
-*/
+	});
+

@@ -67,8 +67,6 @@ $stats = Article::articleStats();
         </li>
         <li>
             <ul class="uk-list">
-
-
             <?php
             $arrValues = Article::getArticles();
             foreach ($arrValues as $article){
@@ -77,9 +75,7 @@ $stats = Article::articleStats();
             }
             ?>
             </ul>
-
         </li>
-
     </ul>
 
     <?php require_once "inc/footer.php"; ?>

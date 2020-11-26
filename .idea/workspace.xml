@@ -13,24 +13,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="editor">
-      <change afterPath="$PROJECT_DIR$/ajax/adddatatofile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ajax/readdata.php" afterDir="false" />
+    <list default="true" id="3b5fd39b-d3f5-4f80-8074-e5b7b43d879d" name="Default Changelist" comment="added footer message">
+      <change afterPath="$PROJECT_DIR$/database/setup_page_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/editarticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/01-setup.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/classes/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/classes/Article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/head.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managearticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/managearticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.php" beforeDir="false" afterPath="$PROJECT_DIR$/map.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readarticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/readarticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,21 +63,22 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2\assets" />
+      <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2\inc" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2\database" />
       <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2\assets" />
       <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2\inc" />
       <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2" />
       <recent name="C:\Users\ramun\PhpstormProjects\untitled1" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2\assets" />
-      <recent name="C:\Users\ramun\PhpstormProjects\WebPageLab2\inc" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.php">
@@ -145,6 +138,10 @@
       <workItem from="1606113695726" duration="21426000" />
       <workItem from="1606165168832" duration="184000" />
       <workItem from="1606199612541" duration="13402000" />
+      <workItem from="1606227705185" duration="94000" />
+      <workItem from="1606298403414" duration="2219000" />
+      <workItem from="1606329496500" duration="1225000" />
+      <workItem from="1606372492959" duration="11342000" />
     </task>
     <task id="LOCAL-00001" summary="Added registration and login forms">
       <created>1604089213000</created>
@@ -258,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606165301562</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added footer message">
+      <created>1606227755641</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1606227755641</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +298,8 @@
     <MESSAGE value="added Editor with styles" />
     <MESSAGE value="about page" />
     <MESSAGE value="editor" />
-    <option name="LAST_COMMIT_MESSAGE" value="editor" />
+    <MESSAGE value="added footer message" />
+    <option name="LAST_COMMIT_MESSAGE" value="added footer message" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="194" key="#CLI_Interpreters" timestamp="1603999827544">
@@ -385,10 +390,10 @@
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1605616744862" />
     <state x="1946" y="196" key="SettingsEditor/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1604908797697" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1605814652887" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606165310534">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606227763519">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1606165310534" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1606227763519" />
     <state x="808" y="249" key="ftp.server.browser" timestamp="1605615676310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

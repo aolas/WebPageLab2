@@ -65,7 +65,7 @@ class Article {
 
     public static function getArticles() {
         $connectin = DB::getConnection();
-        $articles = $connectin->prepare("SELECT article_id, user_id, title, SUBSTRING(article_text,1,200) as article_text , publication_time FROM articles");
+        $articles = $connectin->prepare("SELECT article_id, user_id, title, SUBSTRING(article_text,1,200) as article_text , publication_time FROM articles"); //ORDER BY publication_time DESC");
         $articles->execute();
         return $articles->fetchAll(PDO::FETCH_OBJ);
     }
@@ -73,7 +73,7 @@ class Article {
         $connectin = DB::getConnection();
         $user_id = Filter::Int($user_id);
         try{
-            $articles = $connectin->prepare("SELECT article_id, title, wordcount,  publication_time FROM articles WHERE user_id=:user_id");
+            $articles = $connectin->prepare("SELECT article_id, title, wordcount,  publication_time FROM articles WHERE user_id=:user_id ");
             $articles->bindParam(':user_id', $user_id, PDO::PARAM_INT);
             $articles->execute();
         } catch (PDOException $e){

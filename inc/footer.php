@@ -1,5 +1,5 @@
 <footer class="uk-align-center" >
-    Page created 2020 by Ramūnas
+    Page created <?php echo date('Y'); ?> by Ramūnas
 </footer>
 
 <!-- jQuery is required -->
